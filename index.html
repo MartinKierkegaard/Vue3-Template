@@ -14,25 +14,7 @@
       <div class="nav-bar"></div>
 
       <h1>{{ intro }}</h1>
-      <h2>{{ name }}</h2>
       
-      <div v-show="skjulliste" v-for="item in liste" :key="item">
-        <h3 class="red" v-if="item > 3">{{ item }}</h3>
-        <h3 class ="yellow" v-else ">{{ item }}</h3>
-      </div>
-
-      <div v-for="person in listenavne" :key="person.name">
-        <h3>{{ person.name }} - {{ person.age }}</h3>
-      </div>
-
-      <!-- <h3 v-for="item in liste" :key="item">{{ item }}</h3> -->
-
-      <input v-model="name" placeholder="Enter your name" />
-      <button v-on:click="add">Add</button>
-      <input v-model.number="personAge" type="number" placeholder="Enter age" />
-      <button v-on:click="addPerson">Add person</button>
-      <br>
-      <button @click="skjul">Skjul liste</button>
     </div>
 
     <!-- Import App -->
